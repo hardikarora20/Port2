@@ -60,7 +60,7 @@ main::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     font-size: 12rem;
-    scroll-snap-align: start;
+    scroll-snap-align:start;
 }
 
 /* .section-1 {
@@ -231,6 +231,8 @@ u{
 .textcon{
     font-size: 1rem;
     margin-top: 0.5rem;
+    /* height: 5rem; */
+    overflow-y: hidden;
 }
 .flex{
     display: flex;
@@ -239,6 +241,7 @@ u{
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-top: 0.5rem;
 }
 .im{
     width: 2rem;
@@ -256,25 +259,29 @@ u{
     flex-wrap: nowrap;
     flex-direction: row;
     align-content: center;
-    justify-content: flex-end;
+    margin-inline-start: -2rem;
+    justify-content: flex-start;
+}
+#more{
+    display: none;
 }
 .ullang li{
     font-size: 1rem;
-    background-color: #141414;
+    background-color: #ffffff;
     text-align: center;
     width:4rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    color:#ffffff;
+    color:#000000;
 }
 .testimonial-grid{
     margin: 2rem;
     display: grid;
     gap: 1rem;
     grid-template-areas:
-        "one two"
-        "three four"
-        "five five";
+        "one one two two"
+        "three four four five";
+        /* grid-template-columns: 1fr 1fr 3fr; */
     margin-bottom: 5rem;
     height: auto;
     justify-content: center;
@@ -282,8 +289,9 @@ u{
     justify-items: center;
 }
 .testimonial{
-    background-color: #0088FF;
+    background-color: #9e9e9e79;
     padding-inline: 2rem;
+    /* backdrop-filter: blur(5px); */
     padding-block: 1rem;
     border-radius: 1rem;
 }
@@ -302,7 +310,31 @@ u{
 .testimonial:nth-child(5) {
     grid-area: five;
 }
-
+.section-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    flex-direction: row;
+}
+.section-4 .block{
+    font-size: 2rem;
+    /* width: 25rem;     */
+    padding-block: 20rem;
+    filter: hue-rotate(130deg);
+    background-color: red;
+    /* height: 100vh; */
+    transition: 0.2s all ease-in-out;
+    /* margin: auto; */
+    text-align: center;
+    color: darkblue;
+}
+.block:hover{
+    filter: hue-rotate(0deg);
+    padding-inline: 12rem;
+}
 
 @media screen and (orientation: portrait)  {
     .section-1{
@@ -349,10 +381,10 @@ u{
         "five";
     }
     .name{
-        font-size: 5rem;
+        font-size: 4rem;
     }
     .yr{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .im{
         width: 5rem;
@@ -365,14 +397,15 @@ u{
     }
     .testimonial-grid{
         width: 90vw;
+        gap:4rem;
     }
     .textcon{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .ullang{
         margin-block: 4rem;
         flex-wrap: wrap;
-        justify-content: center;
+        /* justify-content: center; */
     }
     .ullang li{
         font-size: 2.5rem;
