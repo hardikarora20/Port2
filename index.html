@@ -10,24 +10,25 @@
           <script src="particles.js"></script>
           <script src="app.js"></script>
           <div class="nav-menu" id="menu" onclick="nav()">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-            width="96" height="96"
-            viewBox="0 0 24 24"
-            style=" fill:#000000;"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path></svg>
-          </div>
+            <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="16" y="26" width="65" height="8" rx="4" fill="#000000"/>
+              <rect x="16" y="44" width="65" height="8" rx="4" fill="#000000"/>
+              <rect x="16" y="62" width="65" height="8" rx="4" fill="#000000"/>
+              </svg>
+            </div>
             <div id="nav" class="nav">
               <div class="nav-list">
                 <ul class="nav-ul">
-                  <li onclick="check()"><span>HOME    </span></li>
-                  <li><span>ABOUT   </span></li>
-                  <li><span>PROJECTS</span></li>
-                  <li><span>CONTACT </span></li>
+                  <li onclick="scrolldiv(1)"><span>HOME    </span></li>
+                  <li onclick="scrolldiv(2)"><span>ABOUT   </span></li>
+                  <li onclick="scrolldiv(3)"><span>PROJECTS</span></li>
+                  <li onclick="scrolldiv(5)"><span>CONTACT </span></li>
                 </ul>
               </div>
             </div>
             <div class="sections" onclick="check()">
             <section class="section section-1" id="section1">
-                  <p class="hometitle">Hello I'm <b>Hardik Arora</b><br>
+                  <p class="hometitle">Hello I'm <br class="br-name"><b onclick="back()">Hardik Arora</b><br>
                     <font class="hometext">I’m a Web Developer and a Java Programmer<br class="newline"> based in India.<br></font>
               
                     <div class="links">
@@ -84,12 +85,12 @@
                     </p>
                 </section>
                 <section class="section section-3" id="section3" >
-                  <p class="abtitle">Projects</p>
+                  <p class="abtitle" id="project-title">Projects</p>
                     <main class="testimonial-grid">
                       <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100" onclick="myFunction()">
                         <div class="flex">
                           <div>
-                            <a href="https://github.com/hardikkk20/cpp-wordle" target="_blank">
+                            <a href="https://github.com/hardikkk20/cpp-wordle" target="_blank" title="View GitHub Repository">
                             <svg class="im" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
                               <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
                             </svg>
@@ -113,7 +114,7 @@
                       <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100" onclick="myFunction()">
                         <div class="flex">
                           <div>
-                            <a href="https://github.com/hardikkk20/cpp-wordle" target="_blank">
+                            <a href="https://github.com/hardikkk20/Port2" target="_blank" title="View GitHub Repository">
                             <svg class="im" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
                               <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
                             </svg>
@@ -125,11 +126,27 @@
                           </div>
                         </div>
                         <p class="textcon">
-                          Developed a portfolio website to house all of my previous work as well as future projects. It will also contain a summary of<span id="dots">...</span><span id="more" >
-                           my qualifications and contact information.</span>
+                          Developed a portfolio website to house all of my previous work as well as future projects. It also<span id="dots">...</span><span id="more" >
+                          contains a summary of my qualifications and contact information.</span>
                         </p><div class="lang"><ul class="ullang">
                           <li>HTML</li>
                           <li>CSS</li>
+                          <li>
+                            <a href="https://hardikkk20.github.io/Port2/" target="_blank" title="View Hosted Webpage">
+                            <svg class="link-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_35_2)">
+                            <path d="M18 26L10.0278 26V26C3.81465 24.9654 3.81465 16.0346 10.0278 15V15H18" stroke="white" stroke-width="3"/>
+                            <path d="M23 15H30.9722V15C37.1853 16.0346 37.1853 24.9654 30.9722 26V26H23" stroke="white" stroke-width="3"/>
+                            <line x1="14" y1="20.5" x2="27" y2="20.5" stroke="white" stroke-width="3"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_35_2">
+                            <rect width="40" height="40" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            </a>
+                            </li>
                           <!-- <li>JS</li> -->
                         </ul></div>
                         
@@ -137,7 +154,7 @@
                       <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100" onclick="myFunction()">
                         <div class="flex">
                           <div>
-                            <a href="https://github.com/hardikkk20/cpp-wordle" target="_blank">
+                            <a href="https://github.com/hardikkk20/OIBSIP/tree/main/ToDo" target="_blank" title="View GitHub Repository">
                             <svg class="im" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
                               <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
                             </svg>
@@ -155,13 +172,29 @@
                           <li>HTML</li>
                           <li>CSS</li>
                           <li>JS</li>
+                          <li>
+                            <a href="https://hardikkk20.github.io/OIBSIP/ToDo/" target="_blank" title="View Hosted Webpage">
+                            <svg class="link-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_35_2)">
+                            <path d="M18 26L10.0278 26V26C3.81465 24.9654 3.81465 16.0346 10.0278 15V15H18" stroke="white" stroke-width="3"/>
+                            <path d="M23 15H30.9722V15C37.1853 16.0346 37.1853 24.9654 30.9722 26V26H23" stroke="white" stroke-width="3"/>
+                            <line x1="14" y1="20.5" x2="27" y2="20.5" stroke="white" stroke-width="3"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_35_2">
+                            <rect width="40" height="40" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            </a>
+                            </li>
                         </ul></div>
                         
                       </article>
                       <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100" onclick="myFunction()">
                         <div class="flex">
                           <div>
-                            <a href="https://github.com/hardikkk20/cpp-wordle" target="_blank">
+                            <a href="https://github.com/hardikkk20/OIBSIP/tree/main/Calculator" target="_blank" title="View GitHub Repository">
                             <svg class="im" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
                               <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
                             </svg>
@@ -180,6 +213,22 @@
                           <li>HTML</li>
                           <li>CSS</li>
                           <li>JS</li>
+                          <li>
+                            <a href="https://hardikkk20.github.io/OIBSIP/Calculator/" target="_blank" title="View Hosted Webpage">
+                            <svg class="link-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_35_2)">
+                            <path d="M18 26L10.0278 26V26C3.81465 24.9654 3.81465 16.0346 10.0278 15V15H18" stroke="white" stroke-width="3"/>
+                            <path d="M23 15H30.9722V15C37.1853 16.0346 37.1853 24.9654 30.9722 26V26H23" stroke="white" stroke-width="3"/>
+                            <line x1="14" y1="20.5" x2="27" y2="20.5" stroke="white" stroke-width="3"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_35_2">
+                            <rect width="40" height="40" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            </a>
+                            </li>
                         </ul></div>
                         
                       </article>
@@ -187,7 +236,7 @@
                       <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100" onclick="myFunction()">
                         <div class="flex">
                           <div>
-                            <a href="https://github.com/hardikkk20/cpp-wordle" target="_blank">
+                            <a href="https://github.com/hardikkk20/" target="_blank" title="View GitHub Repository">
                             <svg class="im" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
                               <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
                             </svg>
